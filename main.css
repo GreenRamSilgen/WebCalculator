@@ -1,3 +1,6 @@
+html{
+    height: 100%;
+}
 body {
     height: 100%;
 }
@@ -6,8 +9,9 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
+    top: 40%;
     margin: auto;
-    width: 30%;
+    width: max-content;
     height: fit-content;
     background-color: slategrey;
     opacity: 0.9;
@@ -15,12 +19,36 @@ body {
 
 #mainDisplay {
     width: 100%;
-    height: 100%;
-    background-color: snow;
+    height: 20px;
+    background-color: cornflowerblue;
     text-align: right;
 }
 
 #mainKeys {
     display: flex;
     flex-direction: row;
+}
+
+#numKeys{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    /*
+    grid-template-areas: 
+    "nine eight seven"
+    "six five four"
+    "three two one"
+    "some zero clear";*/
+}
+
+#opKeys{
+    display: grid;
+    grid-template-areas: 
+    "add divide"
+    "subtract enter"
+    "multiply enter";
+}
+
+#enter{
+    grid-area: enter;
 }

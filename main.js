@@ -91,7 +91,14 @@ function calc(val1, val2, op)
     if(op == "+") return val1 + val2;
     if(op == "-") return val1 - val2;
     if(op == "*") return val1 * val2;
-    if(op == "/") return val1 / val2;
+    if(op == "/")
+    { 
+        if(isNaN(val1/val2))
+        {
+            return 0;
+        }
+        return val1/val2;
+    }
 }
 
 
